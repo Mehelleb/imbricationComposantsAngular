@@ -4,5 +4,11 @@
 <!--Ici je suis dans le template du composant ENSEIGNANT
 et je vais faire appel au composant ETUDIANT en précisant que la propriété 
 questionDeMonEnseignant est égale à la valeur de la propriété quesion-->
-<app-etudiant [questionDeMonEnseignant]="question"></app-etudiant>
+
+<!--ici je lis la variable reponseFinale qui est à l'origine d'envois de la réponse
+au composant parent ENSEIGNANT avec une méthode qui va faire une correction. Cette méthode
+prends en paramètre un $event qui contient les données. Enfin, j'implémente cette méthode dans le 
+composant parent-->
+<app-etudiant [questionDeMonEnseignant]="question" (reponseFinale)="correction($event)"></app-etudiant>
+<h2>Réponse enseignant (parent): {{message}}</h2> 
 </div>
