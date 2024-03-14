@@ -1,1 +1,8 @@
-<p>etudiant works!</p>
+<div>
+<h2>Je suis l'étudiant Yacine !</h2>
+<p>Je suis imbriqué dans le composant ENSEIGNANT...</p>
+<h2>La question qui m'a été posée est: {{questionDeMonEnseignant}}</h2>
+<!--j'ai importé FormsModule pour pouvoir utiliser ngModl-->
+<input type="text" class="m-2" [(ngModel)]="reponseEtudiant">
+<button (click)="envoyerReponse()" class="btn btn-primary m-2">Envoyer</button>
+</div>

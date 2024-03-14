@@ -1,4 +1,8 @@
 <div>
 <h2>Bonjour, je suis l'enseignant.</h2>
 <h2>La question posée à l'étudiant est: {{ question}}</h2>
+<!--Ici je suis dans le template du composant ENSEIGNANT
+et je vais faire appel au composant ETUDIANT en précisant que la propriété 
+questionDeMonEnseignant est égale à la valeur de la propriété quesion-->
+<app-etudiant [questionDeMonEnseignant]="question"></app-etudiant>
 </div>
